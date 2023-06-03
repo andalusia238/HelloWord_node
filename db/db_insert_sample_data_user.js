@@ -12,6 +12,7 @@ const insert_user_sql = `
         `
 
 db.execute(insert_user_sql, ['Anya', 'Gupta', 'anygup26@bergen.org', '201-338-4444', 'letmein', '0', ' ', '1']);
+db.execute(insert_user_sql, ['Brook', 'Foley', 'brofol26@bergen.org', '201-337-4444', 'letmein2', '0', ' ', '1']);
 db.execute(insert_user_sql, ['Ivy', 'Wang', 'ivywan@bergen.org', '551-777-8989', 'password', '1', 'teacher', '2']);
 db.execute(insert_user_sql, ['Bob', 'Smith', 'bobie23@gmail.com', '201-768-9003', 'costumes11', '0', ' ', '3']);
 db.execute(insert_user_sql, ['Sally', 'Anderson', 'sallyanderson@gmail.com', '551-651-9984', 'halloween!!', '1', 'principal', '4']);

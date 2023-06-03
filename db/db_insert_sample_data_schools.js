@@ -2,9 +2,9 @@ const db = require("./db_connection");
 
 /**** Delete *CONTENTS OF* existing tables (but not dropping tables themselves) ****/
 
-// const delete_order_table_sql = "DELETE FROM order;"
+// const delete_ord_table_sql = "DELETE FROM ord;"
 
-// db.execute(delete_order_table_sql);
+// db.execute(delete_ord_table_sql);
 
 // const delete_tokens_table_sql = "DELETE FROM tokens;"
 

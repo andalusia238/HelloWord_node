@@ -158,7 +158,7 @@ db.execute(drop_school_table_sql);
     //CREATE THE REALLL ORDER TABLE
     const create_order_table_sql = `
     CREATE TABLE ord (
-        order_id INT NOT NULL,
+        order_id INT NOT NULL AUTO_INCREMENT,
         teacher VARCHAR(45) NOT NULL,
         token_id INT(10) NOT NULL,
         costume_id INT NOT NULL,
@@ -195,7 +195,6 @@ db.execute(drop_school_table_sql);
       COLLATE = latin1_bin;
       
     `
-
     db.execute(create_order_table_sql)
     
 db.end();
