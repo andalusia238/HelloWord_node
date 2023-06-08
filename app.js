@@ -1,4 +1,5 @@
 // set up the server
+const DEBUG = true;
 const express = require("express" );
 const app = express()
 const logger = require("morgan");
