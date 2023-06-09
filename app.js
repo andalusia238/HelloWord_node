@@ -23,8 +23,8 @@ app.use(express.static(__dirname + '/public'));
 
 // define a route for the default home page
 app.get( "/", ( req, res ) => {
-    res.sendFile( __dirname + "/views/index.html" );
-} );
+    res.render('index');
+});
 
 // define a route for the costume list page
 const read_costume_list_all_sql = `
@@ -39,8 +39,10 @@ app.get( "/costume_list", ( req, res ) => {
             console.log(error ? error : results);
         if (error)
             res.status(500).send(error); //Internal Server Error
-        else
-            res.send(results);
+        else {
+            let data = {costumeList : results };
+            res.render('costume_list', data);
+        }
     });
 });
 
@@ -65,8 +67,11 @@ app.get( "/:id", ( req, res ) => {
             res.status(500).send(error); //Internal Server Error
         else if (results.length == 0)
             res.status(404).send(`No costume id found with id = "${req.params.id}"` ); // NOT FOUND
-        else
-            res.send(results[0]); // results is still an array
+        else {
+            let data = {costume: results[0]};
+            res.render('detail', data); 
+        }
+            
     });
 });
 

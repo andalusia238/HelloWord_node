@@ -12,9 +12,9 @@ const insert_costume_sql = `
         `
 
 db.execute(insert_costume_sql, ['batman', 'amazing batman costume, in perfect condition', 'S', 'batman.jpg', '1']);
-db.execute(insert_costume_sql, ['pikachu', ' ', 'L', ' ', '2']);
+db.execute(insert_costume_sql, ['pikachu', 'brand new, never worn', 'L', 'pikachu.jpg', '2']);
 db.execute(insert_costume_sql, ['witch', 'good condition, witch costume, worn by my daughter last year', 'XL', 'witch.jpg', '3']);
-db.execute(insert_costume_sql, ['bunny', 'nice bunny costume, good condition, only used once a couple years ago', 'M', ' ', '4']);
+db.execute(insert_costume_sql, ['bunny', 'nice bunny costume, good condition, only used once a couple years ago', 'M', 'bunny.jpg', '4']);
 
 
 db.end();

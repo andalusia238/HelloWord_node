@@ -38,7 +38,7 @@
               <div class="col s12"><br></div>
               <div class="col s12"><br></div>
               <div class="col s12">
-                <h2 class="left-align">Batman</h2><br>
+                <h2 class="left-align"><%= costume.name %></h2><br>
               </div>
 
               <div class="col s12">
@@ -46,7 +46,7 @@
                 <table>
                     <thead>
                       <tr>
-                          <th colspan="3"><img src="images/batman.jpg" width="200px"></th>
+                          <th colspan="3"><img src="images/<%= costume.image %>" width="200px"></th>
                       </tr>
                     </thead>
             
@@ -54,12 +54,12 @@
                       <tr>
                         <td></td>
                         <td><h4><b>Size:</b></h4></td>
-                        <td><h4>Small</h4></td>
+                        <td><h4><%= costume.size %></h4></td>
                       </tr>
                       <tr>
                         <td></td>
                         <td><h4><b>Description:</b></h4></td>
-                        <td><h4>Great Batman costume only worn once!</h4></td>
+                        <td><h4><%= costume.description %></h4></td>
                       </tr>
                     </tbody>
                   </table>
@@ -84,26 +84,25 @@
                     <form id="updateForm">
                         <div class="row">
                             <div class="input-field col s8">
-                                <input type="text" id="titleInput" name="Name" class="validate" data-length="45" required>
-                                <label for="titleInput">Costume Name</label>
+                                <input type="text" id="titleInput" name="Name" class="validate" data-length="45" required value="<%= costume.name %>">
                             </div>
         
                             <div class="input-field col s4">
-                                <select>
+                                <select type="text" id="""costumeSize" name="size" required>
                                   <option value="" disabled selected>Size</option>
-                                  <option value="1">Small</option>
-                                  <option value="2">Medium</option>
-                                  <option value="3">Large</option>
+                                  <option value="S" <% if (costume.size == "S") { %> selected <% } %>>Small</option>
+                                  <option value="M" <% if (costume.size == "M") { %> selected <% } %>>Medium</option>
+                                  <option value="L" <% if (costume.size == "L") { %> selected <% } %>>Large</option>
+                                  <option value="XL" <% if (costume.size == "XL") { %> selected <% } %>>XLarge</option>
                                 </select>
-                                <label>Costume Size</label>
+                                <!-- <label>Costume Size</label> -->
                             </div>
         
                         </div>
         
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                <label for="textarea1">Description</label>
+                                <textarea id="textarea1" class="materialize-textarea"><%= costume.description %></textarea>
                             </div>
                         </div>
         
