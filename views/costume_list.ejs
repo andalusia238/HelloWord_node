@@ -112,19 +112,20 @@
           <!-- my form to add costumes -->
 
           <div class="section" id="add">
-            <form id="addForm">
+            <form id="addForm" method="post" action="/costume_list">
                 <div class="row">
                     <div class="input-field col s8">
-                        <input type="text" id="titleInput" name="Name" class="validate" data-length="45" required>
+                        <input type="text" id="titleInput" name="name" class="validate" data-length="45" required>
                         <label for="titleInput">Costume Name</label>
                     </div>
 
                     <div class="input-field col s4">
-                        <select>
+                        <select name="size">
                           <option value="" disabled selected>Size</option>
-                          <option value="1">Small</option>
-                          <option value="2">Medium</option>
-                          <option value="3">Large</option>
+                          <option value="S">Small</option>
+                          <option value="M">Medium</option>
+                          <option value="L">Large</option>
+                          <option value="XL">X-Large</option>
                         </select>
                         <label>Costume Size</label>
                     </div>
@@ -133,7 +134,7 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <textarea id="textarea1" class="materialize-textarea" name="description"></textarea>
                         <label for="textarea1">Description</label>
                     </div>
                 </div>
@@ -143,12 +144,12 @@
                     <div class = "file-field input-field col">
                        <div class = "btn orange darken-3">
                           <span>Browse</span>
-                          <input type = "file" />
+                          <input type = "file" name="imagefile"/>
                        </div>
                        
                        <div class = "file-path-wrapper">
                           <input class = "file-path validate" type = "text"
-                             placeholder = "Upload Picture" />
+                             placeholder = "Upload Picture" name="image"/>
                        </div>
                     </div>
                  </div>

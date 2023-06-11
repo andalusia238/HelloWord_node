@@ -15,6 +15,6 @@ const insert_ord_sql = `
         (?, ?, ?, ?, ?);
         `
         
-db.execute(insert_ord_sql, ['Ms. Fillebrown', '123', '1', '1', '2']);
+db.execute(insert_ord_sql, ['Ms. Fillebrown', '123', '3', '1', '2']);
 
 db.end();
