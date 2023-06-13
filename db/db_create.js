@@ -115,46 +115,6 @@ db.execute(drop_school_table_sql);
     `
     db.execute(create_tokens_table_sql)
 
-//     const create_order_table_sql = `
-//     CREATE TABLE webapp_9MF_anygup26.order (
-//   order_id INT NOT NULL AUTO_INCREMENT,
-//   order_dt DATE NOT NULL,
-//   teacher VARCHAR(45) NOT NULL,
-//   token_id INT(10) NOT NULL,
-//   costume_id INT NOT NULL,
-//   school_id INT NOT NULL,
-//   user_id INT NOT NULL,
-//   PRIMARY KEY (order_id),
-//   UNIQUE INDEX order_id_UNIQUE (order_id ASC),
-//   INDEX token_id_fk_idx (token_id ASC),
-//   INDEX costume_id_fk_idx (costume_id ASC),
-//   INDEX user_id_fk_order_idx (user_id ASC),
-//   INDEX school_id_fk_order_idx (school_id ASC),
-//   CONSTRAINT token_id_fk
-//     FOREIGN KEY (token_id)
-//     REFERENCES webapp_9MF_anygup26.tokens (token_id)
-//     ON DELETE NO ACTION
-//     ON UPDATE NO ACTION,
-//   CONSTRAINT costume_id_fk
-//     FOREIGN KEY (costume_id)
-//     REFERENCES webapp_9MF_anygup26.costume (costume_id)
-//     ON DELETE NO ACTION
-//     ON UPDATE NO ACTION,
-//   CONSTRAINT user_id_fk_order
-//     FOREIGN KEY (user_id)
-//     REFERENCES webapp_9MF_anygup26.user (user_id)
-//     ON DELETE NO ACTION
-//     ON UPDATE NO ACTION,
-//   CONSTRAINT school_id_fk_order
-//     FOREIGN KEY (school_id)
-//     REFERENCES webapp_9MF_anygup26.school (school_id)
-//     ON DELETE NO ACTION
-//     ON UPDATE NO ACTION)
-// ENGINE = InnoDB
-// DEFAULT CHARACTER SET = latin1
-// COLLATE = latin1_bin;
-
-//     `
     //CREATE THE REALLL ORDER TABLE
     const create_order_table_sql = `
     CREATE TABLE ord (

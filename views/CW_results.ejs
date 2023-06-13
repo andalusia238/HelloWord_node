@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Ingredient Recipe Finder</title>
+
+    <!-- Materialize CSS and Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+    <!-- Nav bar: Reference: https://materializecss.com/navbar.html -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/cookingweb" class="brand-logo"><i class="material-icons left"></i>Random Ingredient Recipe Finder</a>
+        </div>
+    </nav>
+
+    <!-- Actual page content! Reference: https://materializecss.com/grid.html, https://materializecss.com/helpers.html -->
+    <div class="container left-align">
+        <h1>Search Results!</h1>
+        <img src="../images/eating_panda.jpg" width="130px">
+        <h2>Almost time to eat!  See what you can whip up!</h1>
+    </div>
+
+    <div class="container left-align">
+      <!--
+      <ul>
+        <% results.forEach(function(result) { %>
+          <li><%= result.recipe_name %></li>
+        <% }); %>
+      </ul>
+      -->
+      
+        <table class="striped">
+            <thead>
+              <tr>
+                  <th>Recipe Name</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <% results.forEach(function(result) { %>
+              <tr>
+                <td><a href="https://www.allrecipes.com/search?q=<%=(result.recipe_name) %>"><%= result.recipe_name %></a></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        
+    </div>
+
+
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Auto-initialize Materialize elements (Note - more specific initialization may be required for certain elements)
+    Reference: https://materializecss.com/auto-init.html-->
+    <script> M.AutoInit();</script>
+
+</body>
+
+</html>

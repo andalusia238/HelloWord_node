@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Ingredient Recipe Finder</title>
+
+    <!-- Materialize CSS and Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+    <!-- Nav bar: Reference: https://materializecss.com/navbar.html -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/cookingweb" class="brand-logo"><i class="material-icons left"></i>Random Ingredient Recipe Finder</a>
+        </div>
+    </nav>
+
+    <!-- Actual page content! Reference: https://materializecss.com/grid.html, https://materializecss.com/helpers.html -->
+    <div class="container left-align">
+        <h1>Welcome!</h1>
+        <img src="../images/cooking_panda.jpg" width="200px">
+        <h2>Enter up to 5 ingredients and see what you can make!</h1>
+    </div>
+
+    <div class="container left-align">
+        <form class="col s12" method="post" action="/search">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="1st ingredient" type="text" class="validate" name="ingredient1">
+                    <label for="1st ingredient">1st ingredient</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="2nd ingredient" type="text" class="validate" name="ingredient2">
+                    <label for="2nd ingredient">2nd ingredient</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="3rd ingredient" type="text" class="validate" name="ingredient3">
+                    <label for="3rd ingredient">3rd ingredient</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="4th ingredient" type="text" class="validate" name="ingredient4">
+                    <label for="4th ingredient">4th ingredient</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="5th ingredient" type="text" class="validate" name="ingredient5">
+                    <label for="5th ingredient">5th ingredient</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Auto-initialize Materialize elements (Note - more specific initialization may be required for certain elements)
+    Reference: https://materializecss.com/auto-init.html-->
+    <script> M.AutoInit();</script>
+
+</body>
+
+</html>
